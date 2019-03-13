@@ -10,6 +10,13 @@ class ToDo extends Component {
       <div className="ToDo">
         <Title />
         <List />
+        <div className="AddForm">
+          <input type="text" placeholder="Enter a task" id="taskbox" />
+          <button id="addTask" onClick={this.addTask}>Add Task</button>
+          <br/>
+          <button id="clearTasks" onClick={this.clearTasks}>Finished the List</button>
+        </div>
+        <div className="ClearForm"></div>
       </div>
     );
   }
