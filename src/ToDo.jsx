@@ -9,7 +9,7 @@ class ToDo extends Component {
     return (
       <div className="ToDo">
         <Title />
-        <List />
+        <List toDos={this.props.toDos}/>
         <div className="AddForm">
           <input type="text" placeholder="Enter a task" id="taskbox" />
           <button id="addTask" onClick={this.addTask}>Add Task</button>

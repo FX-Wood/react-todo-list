@@ -4,7 +4,9 @@ import './index.css';
 import ToDo from './ToDo';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<ToDo />, document.getElementById('root'));
+const toDos = ["Buy ice cream", "eat ice cream", "delete the gym"]
+
+ReactDOM.render(<ToDo todos={toDos}/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
