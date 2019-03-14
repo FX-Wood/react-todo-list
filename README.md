@@ -7,7 +7,7 @@ So, we've gone through all of the basics of React. To really hammer it home with
 
 This is what our list will look like when we're finished:
 
-![finished-list](./images/todo-list-finished.png)
+![finished-list](./public/images/todo-list-finished.png)
 
 Let's get started!
 
@@ -98,7 +98,7 @@ Let's make a component for `ListItem`s. This component can simply render  `<li>M
 
 At this point, our app looks like this:
 
-![list-preview](./images/todo-list-1.png)
+![list-preview](./public/images/todo-list-1.png)
 
 ## Side note - let's quickly format it a little more nicely!
 
@@ -155,7 +155,7 @@ export default ListItem
 ```
 
 Our app now looks like this:
-![list-preview](./images/todo-list-2.png)
+![list-preview](./public/images/todo-list-2.png)
 
 
 ## Third, render different items in an array.
@@ -260,7 +260,7 @@ export default ListItem
 ```
 
 Now what we have is:
-![list-preview](./images/todo-list-3.png)
+![list-preview](./public/images/todo-list-3.png)
 
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) ToDo List Exercise: State
 
