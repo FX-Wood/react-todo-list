@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './ToDo.css';
 import Title from './Title'
 import List from './List'
