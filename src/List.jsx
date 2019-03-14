@@ -5,6 +5,7 @@ class List extends Component {
         const items = this.props.toDos.map((toDo, i) => <ListItem toDo={toDo} key={i}></ListItem>)
         return (
             <ul className="List">
+                {items}
             </ul>
         )
     }
