@@ -4,10 +4,14 @@ class List extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            toDos: props.toDos
+            toDos: props.toDos,
+            newItem: ''
         }
         this.clearList = this.clearList.bind(this)
+        this.inputItemChange = this.inputItemChange.bind(this)
+        this.addToList = this.addToList.bind(this)
     }
+
     clearList(e) {
         console.log('clearing list!')
         this.setState({
@@ -15,18 +19,37 @@ class List extends Component {
         })
     }
 
+    inputItemChange(e) {
+        console.log('changing input item!')
+        this.setState({newItem: e.target.value})
+    }
+
     addToList(e) {
-        this.state.toDos.push('This is a new item')
+        console.log('adding item')
+        this.setState((state, props) => {
+            return {
+                toDos: state.toDos.concat(Array.of(state.newItem)),
+                newItem: ''
+            }
+        })
     }
 
     render() {
+        console.log(this.state.toDos)
         const items = this.state.toDos.map((toDo, i) => <ListItem toDo={toDo} key={i}></ListItem>)
         return (
             <>
                 <ul className="List">
                     {items}
                 </ul>
-                <button onClick={this.clearList}>Clear List</button>
+                <input type="text" 
+                    placeholder="Type a task here" 
+                    onChange={this.inputItemChange}
+                    value={this.state.newItem}
+                />
+                <button onClick={this.addToList}>Add it to the list!</button>
+                <br/>
+                <button onClick={this.clearList}>Finished the list</button>
             </>
         )
     }
